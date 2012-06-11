@@ -10,7 +10,7 @@
  *
  * This file will be auto-generated each and everytime you save your project.
  *
- * Do NOT hand edit this file.2
+ * Do NOT hand edit this file.
  */
 
 Ext.define('MyApp.view.Viewport', {
