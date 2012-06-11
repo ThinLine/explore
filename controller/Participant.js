@@ -84,6 +84,7 @@ Ext.define('MyApp.controller.Participant', {
         Ext.getCmp('sgbtn-choixliste').setPressedButtons([]);
         Ext.getCmp('list-participants').deselectAll();
         //Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
+        alert('a malibu');
         Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-ajoutparticipant'));
     },
 
