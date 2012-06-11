@@ -1,0 +1,2 @@
+.GoalInterCheck:checked:after,.checkitem:after,.checkitem.done:after{content:"";position:absolute;width:0.75em;height:1.25em;left:auto;-webkit-transform:rotate(45deg) skew(5deg);-webkit-transform-origin:50% 50%;right:1em;border:.35em solid;border-top:none;border-left:none;}
+.checkitem{float:right;width:70px;height:28px}.checkitem:after{border-color:#DDDDDD}.checkitem.done:after{border-color:#06346A}
