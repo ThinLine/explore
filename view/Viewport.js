@@ -107,255 +107,6 @@ Ext.define('MyApp.view.Viewport', {
                         ]
                     },
                     {
-                        xtype: 'container',
-                        id: 'panel-ajoutcircuit',
-                        ui: '',
-                        hideOnMaskTap: false,
-                        layout: {
-                            type: 'vbox'
-                        },
-                        modal: false,
-                        scrollable: 'false',
-                        items: [
-                            {
-                                xtype: 'toolbar',
-                                docked: 'top',
-                                id: 'toolbar-ajoutcircuit',
-                                title: 'Nouveau Circuit',
-                                items: [
-                                    {
-                                        xtype: 'button',
-                                        docked: 'left',
-                                        id: 'btn-annulerajoutcircuit',
-                                        margin: '10px',
-                                        ui: 'decline',
-                                        text: 'Annuler'
-                                    },
-                                    {
-                                        xtype: 'button',
-                                        docked: 'right',
-                                        id: 'btn-validerajoutcircuit',
-                                        margin: '10px',
-                                        ui: 'confirm',
-                                        text: 'Valider'
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'fieldset',
-                                margin: 15,
-                                title: 'Circuit',
-                                items: [
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-nomcircuit',
-                                        label: 'Nom'
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'fieldset',
-                                margin: 15,
-                                title: 'Groupe',
-                                items: [
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-nomgroupe',
-                                        label: 'Nom'
-                                    },
-                                    {
-                                        xtype: 'datepickerfield',
-                                        id: 'datefield-dategroupe',
-                                        label: 'Date',
-                                        placeHolder: 'mm/dd/yyyy',
-                                        picker: {
-                                            doneButton: 'Confirmer',
-                                            cancelButton: 'Annuler'
-                                        }
-                                    },
-                                    {
-                                        xtype: 'sliderfield',
-                                        id: 'slider-dureegroupe',
-                                        label: 'Durée<br />(1 jour)',
-                                        value: [
-                                            1
-                                        ],
-                                        maxValue: 30,
-                                        minValue: 1
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'dataview',
-                                hidden: true,
-                                id: 'dataview-imagecircuit',
-                                padding: '10px',
-                                itemTpl: [
-                                    '<div style="clear: right; float: left; width:100px; margin-right: 10px"><img style="width:100px" src={url} /></div>'
-                                ],
-                                store: 'RemotePhotos',
-                                flex: 1
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'container',
-                        id: 'panel-ajoutgroupe',
-                        ui: '',
-                        hideOnMaskTap: false,
-                        layout: {
-                            type: 'vbox'
-                        },
-                        modal: false,
-                        scrollable: 'false',
-                        items: [
-                            {
-                                xtype: 'toolbar',
-                                docked: 'top',
-                                id: 'toolbar-ajoutgroupe',
-                                title: 'Nouveau Groupe',
-                                items: [
-                                    {
-                                        xtype: 'button',
-                                        docked: 'left',
-                                        id: 'btn-annulerajoutgroupe',
-                                        margin: '10px',
-                                        ui: 'decline',
-                                        text: 'Annuler'
-                                    },
-                                    {
-                                        xtype: 'button',
-                                        docked: 'right',
-                                        id: 'btn-validerajoutgroupe',
-                                        margin: '10px',
-                                        ui: 'confirm',
-                                        text: 'Valider'
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'fieldset',
-                                margin: 15,
-                                title: 'Groupe',
-                                items: [
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-nomajoutgroupe',
-                                        label: 'Nom'
-                                    },
-                                    {
-                                        xtype: 'datepickerfield',
-                                        id: 'datefield-dateajoutgroupe',
-                                        label: 'Date',
-                                        placeHolder: 'mm/dd/yyyy',
-                                        picker: {
-                                            doneButton: 'Confirmer',
-                                            cancelButton: 'Annuler'
-                                        }
-                                    },
-                                    {
-                                        xtype: 'sliderfield',
-                                        id: 'slider-dureeajoutgroupe',
-                                        label: 'Durée<br />(1 jour)',
-                                        value: [
-                                            1
-                                        ],
-                                        maxValue: 30,
-                                        minValue: 1
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'dataview',
-                                hidden: true,
-                                id: 'dataview-imagecircuit',
-                                padding: '10px',
-                                itemTpl: [
-                                    '<div style="clear: right; float: left; width:100px; margin-right: 10px"><img style="width:100px" src={url} /></div>'
-                                ],
-                                store: 'RemotePhotos',
-                                flex: 1
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'container',
-                        id: 'panel-ajoutparticipant',
-                        ui: '',
-                        hideOnMaskTap: false,
-                        layout: {
-                            type: 'vbox'
-                        },
-                        modal: false,
-                        scrollable: 'false',
-                        items: [
-                            {
-                                xtype: 'toolbar',
-                                docked: 'top',
-                                id: 'toolbar-ajoutparticipant',
-                                title: 'Nouveau Participant',
-                                items: [
-                                    {
-                                        xtype: 'button',
-                                        docked: 'left',
-                                        id: 'btn-annulerajoutparticipant',
-                                        margin: '10px',
-                                        ui: 'decline',
-                                        text: 'Annuler'
-                                    },
-                                    {
-                                        xtype: 'button',
-                                        docked: 'right',
-                                        id: 'btn-validerajoutparticipant',
-                                        margin: '10px',
-                                        ui: 'confirm',
-                                        text: 'Valider'
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'fieldset',
-                                margin: 15,
-                                title: 'Participant',
-                                items: [
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-nomparticipant',
-                                        label: 'Nom'
-                                    },
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-prenomparticipant',
-                                        label: 'Prenom'
-                                    },
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-telparticipant',
-                                        label: 'Téléphone'
-                                    },
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-emailparticipant',
-                                        label: 'Email'
-                                    },
-                                    {
-                                        xtype: 'selectfield',
-                                        id: 'select-villeparticipant',
-                                        label: 'Ville',
-                                        displayField: 'nom',
-                                        store: 'Villes',
-                                        valueField: 'id'
-                                    },
-                                    {
-                                        xtype: 'textfield',
-                                        id: 'textfield-adresseparticipant',
-                                        label: 'Adresse'
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
                         xtype: 'toolbar',
                         docked: 'bottom',
                         id: 'toolbar-choixliste',
@@ -1250,6 +1001,255 @@ Ext.define('MyApp.view.Viewport', {
                         layout: {
                             type: 'fit'
                         }
+                    },
+                    {
+                        xtype: 'container',
+                        id: 'panel-ajoutcircuit',
+                        ui: '',
+                        hideOnMaskTap: false,
+                        layout: {
+                            type: 'vbox'
+                        },
+                        modal: false,
+                        scrollable: 'false',
+                        items: [
+                            {
+                                xtype: 'toolbar',
+                                docked: 'top',
+                                id: 'toolbar-ajoutcircuit',
+                                title: 'Nouveau Circuit',
+                                items: [
+                                    {
+                                        xtype: 'button',
+                                        docked: 'left',
+                                        id: 'btn-annulerajoutcircuit',
+                                        margin: '10px',
+                                        ui: 'decline',
+                                        text: 'Annuler'
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        docked: 'right',
+                                        id: 'btn-validerajoutcircuit',
+                                        margin: '10px',
+                                        ui: 'confirm',
+                                        text: 'Valider'
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'fieldset',
+                                margin: 15,
+                                title: 'Circuit',
+                                items: [
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-nomcircuit',
+                                        label: 'Nom'
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'fieldset',
+                                margin: 15,
+                                title: 'Groupe',
+                                items: [
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-nomgroupe',
+                                        label: 'Nom'
+                                    },
+                                    {
+                                        xtype: 'datepickerfield',
+                                        id: 'datefield-dategroupe',
+                                        label: 'Date',
+                                        placeHolder: 'mm/dd/yyyy',
+                                        picker: {
+                                            doneButton: 'Confirmer',
+                                            cancelButton: 'Annuler'
+                                        }
+                                    },
+                                    {
+                                        xtype: 'sliderfield',
+                                        id: 'slider-dureegroupe',
+                                        label: 'Durée<br />(1 jour)',
+                                        value: [
+                                            1
+                                        ],
+                                        maxValue: 30,
+                                        minValue: 1
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'dataview',
+                                hidden: true,
+                                id: 'dataview-imagecircuit',
+                                padding: '10px',
+                                itemTpl: [
+                                    '<div style="clear: right; float: left; width:100px; margin-right: 10px"><img style="width:100px" src={url} /></div>'
+                                ],
+                                store: 'RemotePhotos',
+                                flex: 1
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'container',
+                        id: 'panel-ajoutgroupe',
+                        ui: '',
+                        hideOnMaskTap: false,
+                        layout: {
+                            type: 'vbox'
+                        },
+                        modal: false,
+                        scrollable: 'false',
+                        items: [
+                            {
+                                xtype: 'toolbar',
+                                docked: 'top',
+                                id: 'toolbar-ajoutgroupe',
+                                title: 'Nouveau Groupe',
+                                items: [
+                                    {
+                                        xtype: 'button',
+                                        docked: 'left',
+                                        id: 'btn-annulerajoutgroupe',
+                                        margin: '10px',
+                                        ui: 'decline',
+                                        text: 'Annuler'
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        docked: 'right',
+                                        id: 'btn-validerajoutgroupe',
+                                        margin: '10px',
+                                        ui: 'confirm',
+                                        text: 'Valider'
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'fieldset',
+                                margin: 15,
+                                title: 'Groupe',
+                                items: [
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-nomajoutgroupe',
+                                        label: 'Nom'
+                                    },
+                                    {
+                                        xtype: 'datepickerfield',
+                                        id: 'datefield-dateajoutgroupe',
+                                        label: 'Date',
+                                        placeHolder: 'mm/dd/yyyy',
+                                        picker: {
+                                            doneButton: 'Confirmer',
+                                            cancelButton: 'Annuler'
+                                        }
+                                    },
+                                    {
+                                        xtype: 'sliderfield',
+                                        id: 'slider-dureeajoutgroupe',
+                                        label: 'Durée<br />(1 jour)',
+                                        value: [
+                                            1
+                                        ],
+                                        maxValue: 30,
+                                        minValue: 1
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'dataview',
+                                hidden: true,
+                                id: 'dataview-imagecircuit',
+                                padding: '10px',
+                                itemTpl: [
+                                    '<div style="clear: right; float: left; width:100px; margin-right: 10px"><img style="width:100px" src={url} /></div>'
+                                ],
+                                store: 'RemotePhotos',
+                                flex: 1
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'container',
+                        id: 'panel-ajoutparticipant',
+                        ui: '',
+                        hideOnMaskTap: false,
+                        layout: {
+                            type: 'vbox'
+                        },
+                        modal: false,
+                        scrollable: 'false',
+                        items: [
+                            {
+                                xtype: 'toolbar',
+                                docked: 'top',
+                                id: 'toolbar-ajoutparticipant',
+                                title: 'Nouveau Participant',
+                                items: [
+                                    {
+                                        xtype: 'button',
+                                        docked: 'left',
+                                        id: 'btn-annulerajoutparticipant',
+                                        margin: '10px',
+                                        ui: 'decline',
+                                        text: 'Annuler'
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        docked: 'right',
+                                        id: 'btn-validerajoutparticipant',
+                                        margin: '10px',
+                                        ui: 'confirm',
+                                        text: 'Valider'
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'fieldset',
+                                margin: 15,
+                                title: 'Participant',
+                                items: [
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-nomparticipant',
+                                        label: 'Nom'
+                                    },
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-prenomparticipant',
+                                        label: 'Prenom'
+                                    },
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-telparticipant',
+                                        label: 'Téléphone'
+                                    },
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-emailparticipant',
+                                        label: 'Email'
+                                    },
+                                    {
+                                        xtype: 'selectfield',
+                                        id: 'select-villeparticipant',
+                                        label: 'Ville',
+                                        displayField: 'nom',
+                                        store: 'Villes',
+                                        valueField: 'id'
+                                    },
+                                    {
+                                        xtype: 'textfield',
+                                        id: 'textfield-adresseparticipant',
+                                        label: 'Adresse'
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             }

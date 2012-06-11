@@ -83,8 +83,8 @@ Ext.define('MyApp.controller.Participant', {
 
         Ext.getCmp('sgbtn-choixliste').setPressedButtons([]);
         Ext.getCmp('list-participants').deselectAll();
-        Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
-        Ext.getCmp('panel-actions').setActiveItem(Ext.getCmp('panel-ajoutparticipant'));
+        //Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
+        Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-ajoutparticipant'));
     },
 
     annulerParticipant: function(button, e, options) {

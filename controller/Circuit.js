@@ -151,8 +151,8 @@ Ext.define('MyApp.controller.Circuit', {
     ajouterCircuit: function(button, e, options) {
         Ext.getCmp('sgbtn-choixliste').setPressedButtons([]);
         Ext.getCmp('list-circuits').deselectAll();
-        Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
-        Ext.getCmp('panel-actions').setActiveItem(Ext.getCmp('panel-ajoutcircuit'));
+        //Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
+        Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-ajoutcircuit'));
     },
 
     afficherApercu: function(button, e, options) {

@@ -127,8 +127,8 @@ Ext.define('MyApp.controller.Groupe', {
     ajouterGroupe: function(button, e, options) {
         Ext.getCmp('sgbtn-choixliste').setPressedButtons([]);
         Ext.getCmp('list-groupes').deselectAll();
-        Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
-        Ext.getCmp('panel-actions').setActiveItem(Ext.getCmp('panel-ajoutgroupe'));
+        //Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
+        Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-ajoutgroupe'));
     },
 
     annulerGroupe: function(button, e, options) {
