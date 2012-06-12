@@ -152,6 +152,7 @@ Ext.define('MyApp.controller.Circuit', {
         Ext.getCmp('sgbtn-choixliste').setPressedButtons([]);
         Ext.getCmp('list-circuits').deselectAll();
         //Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-photos'));
+        alert('a malibu');
         Ext.getCmp('panel-vues').setActiveItem(Ext.getCmp('panel-ajoutcircuit'));
     },
 
