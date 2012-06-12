@@ -123,6 +123,8 @@ Ext.define('MyApp.controller.Circuit', {
     },
 
     afficherCircuit: function(dataview, record, options) {
+        alert('a malibu');
+
         // Chargement des groupes du circuit
         Ext.getStore('Groupes').load({
             params:{

@@ -60,7 +60,6 @@ Ext.application({
     ],
 
     launch: function() {
-
         Ext.create('MyApp.view.Viewport', {fullscreen: true});
     }
 
